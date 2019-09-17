@@ -20,13 +20,13 @@ class App extends Component {
     invalid_dob: false
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
 
     // Set errors to default state
@@ -96,7 +96,7 @@ class App extends Component {
                       value={this.state.name}
                     />
                     {this.state.invalid_name ? (
-                      <div className='error'>
+                      <div className="error">
                         First and Last Name must be separated by a space.
                       </div>
                     ) : (
@@ -133,7 +133,7 @@ class App extends Component {
                     value={this.state.birth_date}
                   />
                   {this.state.invalid_dob ? (
-                    <div className='error'>
+                    <div className="error">
                       Age must be greater than 18 years
                     </div>
                   ) : (
@@ -207,7 +207,7 @@ class App extends Component {
             }
           })}
           <div>
-            <button type='submit'>Submit</button>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </>
